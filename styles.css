@@ -1,0 +1,90 @@
+/* Биеийн үндсэн тохиргоо */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+  margin: 0;
+  padding: 0;
+  color: #222;
+}
+
+.container {
+  max-width: 750px;
+  margin: 40px auto;
+  background: #fff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+}
+
+/* Header */
+header h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+/* QA блок */
+.qa-item {
+  margin-bottom: 15px;
+  border-left: 5px solid;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(180deg, #3498db, #9b59b6);
+  border-radius: 8px;
+  background: linear-gradient(120deg, #fdfbfb, #ebedfa);
+  transition: all 0.3s ease, transform 0.3s ease;
+  padding: 15px 18px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+
+.qa-item:hover {
+  transform: translateX(5px);
+  background: linear-gradient(120deg, #eaf0f8, #dbe5f6);
+  border-image-source: linear-gradient(180deg, #e74c3c, #f1c40f);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+/* Question styling */
+.question {
+  font-weight: bold;
+  cursor: pointer;
+  display: block;
+  padding: 10px 0;
+  font-size: 1.05rem;
+  color: #2c3e50;
+  transition: color 0.3s ease;
+}
+
+.question:hover {
+  color: #e74c3c;
+}
+
+/* Answer styling */
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.3s ease;
+  padding-left: 12px;
+  color: #333;
+  margin-top: 0;
+}
+
+/* Checkbox checked үед answer нээгдэх */
+.qa-item input[type="checkbox"]:checked + .question + .answer {
+  max-height: 200px;
+  margin-top: 10px;
+  padding-top: 8px;
+}
+
+/* Checkbox-ийг нуух */
+.qa-item input[type="checkbox"] {
+  display: none;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 0.95rem;
+  color: #555;
+}
